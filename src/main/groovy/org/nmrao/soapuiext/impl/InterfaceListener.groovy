@@ -5,8 +5,8 @@ import com.eviware.soapui.model.support.InterfaceListenerAdapter
 import org.apache.log4j.Logger
 import org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper
 
-import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelperUtil.getInstance
 import static org.apache.log4j.Logger.getLogger
+import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelperUtil.getInstance
 
 class InterfaceListener extends InterfaceListenerAdapter {
 

@@ -4,8 +4,8 @@ import com.eviware.soapui.model.testsuite.*
 import org.apache.log4j.Logger
 import org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper
 
-import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelperUtil.getInstance
 import static org.apache.log4j.Logger.getLogger
+import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelperUtil.getInstance
 
 class SuiteRunListener implements TestSuiteRunListener {
 

@@ -1,5 +1,4 @@
 package org.nmrao.soapuiext.impl
-
 import com.eviware.soapui.model.support.TestRunListenerAdapter
 import com.eviware.soapui.model.testsuite.TestCaseRunContext
 import com.eviware.soapui.model.testsuite.TestCaseRunner
@@ -8,8 +7,8 @@ import com.eviware.soapui.model.testsuite.TestStepResult
 import org.apache.log4j.Logger
 import org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper
 
-import static org.apache.log4j.Category.getInstance
 import static org.apache.log4j.Logger.getLogger
+import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelperUtil.getInstance
 
 class CaseRunListener extends TestRunListenerAdapter {
 

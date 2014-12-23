@@ -1,5 +1,4 @@
 package org.nmrao.soapuiext.impl
-
 import com.eviware.soapui.model.support.ProjectRunListenerAdapter
 import com.eviware.soapui.model.testsuite.ProjectRunContext
 import com.eviware.soapui.model.testsuite.ProjectRunner
@@ -8,8 +7,8 @@ import com.eviware.soapui.model.testsuite.TestSuiteRunner
 import org.apache.log4j.Logger
 import org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper
 
-import static org.apache.log4j.Category.getInstance
 import static org.apache.log4j.Logger.getLogger
+import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelperUtil.getInstance
 
 class ProjectRunListener extends ProjectRunListenerAdapter {
 
