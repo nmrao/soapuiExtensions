@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-listeners xmlns:tns="http://eviware.com/soapui/config">
+	<tns:listener id="Listener5" listenerClass="org.nmrao.soapuiext.impl.CaseRunListener" listenerInterface="com.eviware.soapui.model.testsuite.TestRunListener" />
+	<tns:listener id="Listener4" listenerClass="org.nmrao.soapuiext.impl.ProjectRunListener" listenerInterface="com.eviware.soapui.model.testsuite.ProjectRunListener" />
+	<tns:listener id="Listener3" listenerClass="org.nmrao.soapuiext.impl.RequestStepSubmitListener" listenerInterface="com.eviware.soapui.model.iface.SubmitListener" />
+	<tns:listener id="Listener2" listenerClass="org.nmrao.soapuiext.impl.SuiteListener" listenerInterface="com.eviware.soapui.model.testsuite.TestSuiteListener" />
+	<tns:listener id="Listener1" listenerClass="org.nmrao.soapuiext.impl.SuiteRunListener" listenerInterface="com.eviware.soapui.model.testsuite.TestSuiteRunListener" />
+	<tns:listener id="Listener6" listenerClass="org.nmrao.soapuiext.impl.InterfaceListener" listenerInterface="com.eviware.soapui.model.iface.InterfaceListener" />
+</tns:soapui-listeners>

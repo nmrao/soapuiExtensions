@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="clean" name="Create soapUI extensions jar">
+    <property environment="env"/>
+    <fail unless="env.SOAPUI_HOME" message="SOAPUI_HOME is not set."/>
+    <property name="soapuihome.lib" value="${env.SOAPUI_HOME}/lib"/>
+    <property name="soapuihome.bin" value="${env.SOAPUI_HOME}/bin"/>
+    <path id="compile.classpath">
+    	<fileset dir="${soapuihome.lib}" includes="*.jar"/>
+        <fileset dir="${soapuihome.bin}" includes="*.jar"/>
+    </path>
+
+	<taskdef name="groovyc"
+             classname="org.codehaus.groovy.ant.Groovyc">
+        <classpath>
+            <path refid="compile.classpath" />
+        </classpath>
+    </taskdef>
+
+	<target name="deleteTempDir">
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="../temp" />
+		</delete>
+	</target>
+
+	<target name="compileSource">
+		<echo>Compiling sources classes</echo>
+		<echo>compile.classpath</echo>
+		<mkdir dir="../temp"/>
+        <groovyc srcdir="../src/main/groovy" destdir="../temp" memoryinitialsize="128" memorymaximumsize="256" failonerror="true" listfiles="true">
+            <classpath>
+                <path refid="compile.classpath"/>
+            </classpath>
+            <javac source="1.7" target="1.7" debug="on" />
+        </groovyc>
+		<echo>Finished compiling classes</echo>
+	</target>
+
+	<target depends="compileSource" name="create.soapUIExt.jar">
+		<jar destfile="../lib/SoapUIExtListeners.jar">
+			<manifest/>
+			<fileset dir="../temp">
+				<include name="org/nmrao/soapuiext/**"/>
+			</fileset>
+			<fileset dir="../src/main/groovy">
+				<include name="resources/Dummy.groovy" />
+				<include name="resources/script.properties" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target depends="deleteTempDir,compileSource,create.soapUIExt.jar" name="clean" />
+</project>
