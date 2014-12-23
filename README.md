@@ -1,15 +1,14 @@
 soapuiExtensions
 ================
-This soapuiExtensions library allows users to have some additional functionality in soapUI(free edition) tool.
+This soapuiExtensions library allows users to have some additional functionality in soapUI(free edition) tool, like soapui pro allows to do something before, after doing something.
 
-<p>For eg:User may want to do something before running a test case or after running a test case etc by implementing appropriate groovy script as required. Allow me to add an example here. Usually user may want to add credentials for the request step automatically, see the script samples/scripts/TestSuiteTestStepAdded.groovy</p>
+For eg: User may want to do something before running a test case or after running a test case etc by implementing appropriate groovy script as required. Allow me to add an example here. Usually user may want to add credentials for the request step automatically, see the script [_samples/scripts/TestSuiteTestStepAdded.groovy_](https://github.com/nmrao/soapuiExtensions/blob/master/samples/scripts/TestSuiteTestStepAdded.groovy)
 
-<p>
-<b>How to use this library:</b><br>
-    set <i>SOAPUI_HOME</i> environment variable.<br>
-    copy lib/SoapUIExtListeners.jar file under $SOAPUI_HOME/bin/ext directory<br>
-    copy samples/listeners/custom-listeners.xml file under $SOAPUI_HOME/bin/listeners directory<br>
-    copy samples/scripts directory under $SOAPUI_HOME<br>
-    And implement appropriate groovy script available under $SOAPUI_HOME/scripts<br>
-    Note: for windows users, you may need to check %SOAPUI_HOME%\bin\soapui.bat which actually overwrites SOAPUI_HOME, need to fix soapui.bat script if requires.<br>
-</p>
+### How to use this library: 
+set _SOAPUI_HOME_ environment variable. 
+- copy _[lib/SoapUIExtListeners.jar](https://github.com/nmrao/soapuiExtensions/blob/master/lib/SoapUIExtListeners.jar)_ file under $SOAPUI_HOME/bin/ext directory 
+- copy _[samples/listeners/custom-listeners.xml](https://github.com/nmrao/soapuiExtensions/blob/master/samples/listeners/custom-listeners.xml)_ file under $SOAPUI_HOME/bin/listeners directory 
+- copy _[samples/scripts](https://github.com/nmrao/soapuiExtensions/tree/master/samples/scripts)_ directory under $SOAPUI_HOME 
+- And implement appropriate groovy script available under $SOAPUI_HOME/scripts 
+
+Note: for windows users, you may need to check %SOAPUI_HOME%\bin\soapui.bat which actually overwrites SOAPUI_HOME, need to fix soapui.bat script if requires.
