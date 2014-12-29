@@ -14,7 +14,7 @@ class InterfaceListener extends InterfaceListenerAdapter {
 
     @Override
     public void requestAdded( Request request ) {
-        SoapUIGroovyScriptEngineHelper scriptEngineHelper = getInstance('TEST_CASE_AFTER_RUN',null,null,log)
+        SoapUIGroovyScriptEngineHelper scriptEngineHelper = getInstance('REQUEST_ADDED',null,null,log)
         scriptEngineHelper.scriptEngine.setVariable('request', request)
         log.info('Setting request and log variables')
         scriptEngineHelper.run()
