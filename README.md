@@ -12,4 +12,7 @@ set _SOAPUI_HOME_ environment variable.
 - And implement appropriate groovy script available under $SOAPUI_HOME/scripts 
 
 Note: for windows users, you may need to check %SOAPUI_HOME%\bin\soapui.bat which actually overwrites SOAPUI_HOME, need to fix soapui.bat script if requires.
-uses jdk 7, and groovy 1.8.9
+uses jdk 7, soapUI 4.5.1, and groovy 1.8.9
+
+Dependency
+ - log4j
