@@ -38,18 +38,18 @@ class SoapUIGroovyScriptEngineHelper {
     }
 
     static SoapUIGroovyScriptEngineHelper getInstance(String key, def context, def runner, def log) {
-        Properties prop = new Properties();
-        ClassLoader loader = SoapUIGroovyScriptEngineHelper.class.getClassLoader()
-        //ClassLoader loader = Thread.currentThread().getContextClassLoader()
-        InputStream stream = loader.getResourceAsStream('resources/script.properties')
+        def prop = new Properties()
+        def loader = SoapUIGroovyScriptEngineHelper.class.getClassLoader()
+        def stream = loader.getResourceAsStream('resources/script.properties')
         prop.load(stream)
         def pre_directory = System.getenv('SOAPUI_HOME')
         def directory = pre_directory + '/' + prop.getProperty('SCRIPTS_DIR')
-        String script_path = directory+ '/' + prop.getProperty(key)
-        File scriptFile = new File(script_path)
+        def script_path = directory+ '/' + prop.getProperty(key)
+        def scriptFile = new File(script_path)
         def scriptText
         if (!scriptFile.exists() || scriptFile.isDirectory()) {
-            InputStream stream1 = loader.getResourceAsStream('resources/Dummy.groovy')
+            def dummyScriptFile = prop.getProperty('DUMMY_SCRIPT')
+            def stream1 = loader.getResourceAsStream("resources/${dummyScriptFile}")
             def scanner = new Scanner(stream1).useDelimiter("\\A")
             scriptText = scanner.hasNext() ? scanner.next() : ""
         } else {
