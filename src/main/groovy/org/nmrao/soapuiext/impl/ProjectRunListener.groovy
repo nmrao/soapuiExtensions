@@ -11,7 +11,7 @@ import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper.getInstance
 
 class ProjectRunListener extends ProjectRunListenerAdapter {
 
-    private Logger log = getLogger(ProjectRunListener.class)
+    private final static Logger log = getLogger(ProjectRunListener)
 
     @Override
     void afterTestSuite(ProjectRunner projectRunner, ProjectRunContext runContext, TestSuiteRunner testSuiteRunner) {

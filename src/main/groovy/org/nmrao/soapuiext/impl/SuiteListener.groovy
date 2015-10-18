@@ -8,7 +8,7 @@ import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper.getInstance
 
 class SuiteListener extends TestSuiteListenerAdapter {
 
-    private Logger log = getLogger(SuiteListener.class)
+    private final static Logger log = getLogger(SuiteListener)
     @Override
     void testStepAdded(TestStep testStep, int index) {
         def scriptEngineHelper = getInstance('TEST_SUITE_TEST_STEP_ADDED',null,null,log)

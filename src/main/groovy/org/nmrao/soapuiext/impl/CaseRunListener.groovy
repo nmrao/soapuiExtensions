@@ -11,7 +11,7 @@ import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper.getInstance
 
 class CaseRunListener extends TestRunListenerAdapter {
 
-    private Logger log = getLogger(CaseRunListener.class)
+    private final static Logger log = getLogger(CaseRunListener)
 
     @Override
     void beforeRun(TestCaseRunner testRunner, TestCaseRunContext runContext) {

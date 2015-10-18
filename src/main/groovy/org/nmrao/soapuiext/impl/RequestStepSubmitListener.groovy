@@ -9,7 +9,7 @@ import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper.getInstance
 
 class RequestStepSubmitListener implements SubmitListener {
 
-    private Logger log = getLogger(RequestStepSubmitListener.class)
+    private final static Logger log = getLogger(RequestStepSubmitListener)
 
     @Override
     boolean beforeSubmit(Submit submit, SubmitContext context) {

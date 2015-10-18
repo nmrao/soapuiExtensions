@@ -7,7 +7,7 @@ import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper.getInstance
 
 class SuiteRunListener implements TestSuiteRunListener {
 
-    private Logger log = getLogger(SuiteRunListener.class)
+    private final static Logger log = getLogger(SuiteRunListener)
 
     @Override
     void beforeRun(TestSuiteRunner testRunner, TestSuiteRunContext runContext) {

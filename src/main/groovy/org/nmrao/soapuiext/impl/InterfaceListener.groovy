@@ -8,7 +8,7 @@ import static org.nmrao.soapuiext.SoapUIGroovyScriptEngineHelper.getInstance
 
 class InterfaceListener extends InterfaceListenerAdapter {
 
-    private Logger log = getLogger(InterfaceListener.class)
+    private final static Logger log = getLogger(InterfaceListener)
 
     @Override
     public void requestAdded( Request request ) {
