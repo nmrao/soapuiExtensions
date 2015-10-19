@@ -6,4 +6,5 @@
 	<tns:listener id="Listener2" listenerClass="org.nmrao.soapuiext.impl.SuiteListener" listenerInterface="com.eviware.soapui.model.testsuite.TestSuiteListener" />
 	<tns:listener id="Listener1" listenerClass="org.nmrao.soapuiext.impl.SuiteRunListener" listenerInterface="com.eviware.soapui.model.testsuite.TestSuiteRunListener" />
 	<tns:listener id="Listener6" listenerClass="org.nmrao.soapuiext.impl.InterfaceListener" listenerInterface="com.eviware.soapui.model.iface.InterfaceListener" />
+	<tns:listener id="Listener7" listenerClass="org.nmrao.soapuiext.impl.RequestFilter" listenerInterface="com.eviware.soapui.impl.wsdl.submit.RequestFilter" />
 </tns:soapui-listeners>
