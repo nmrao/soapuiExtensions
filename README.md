@@ -9,7 +9,7 @@ set _SOAPUI_HOME_ environment variable.
 - copy _[lib/SoapUIExtListeners.jar](https://github.com/nmrao/soapuiExtensions/blob/master/lib/SoapUIExtListeners.jar)_ file under $SOAPUI_HOME/bin/ext directory 
 - copy _[samples/listeners/custom-listeners.xml](https://github.com/nmrao/soapuiExtensions/blob/master/samples/listeners/custom-listeners.xml)_ file under $SOAPUI_HOME/bin/listeners directory 
 - copy _[samples/scripts](https://github.com/nmrao/soapuiExtensions/tree/master/samples/scripts)_ directory under $SOAPUI_HOME 
-- And implement appropriate groovy script available under $SOAPUI_HOME/scripts 
+- And implement appropriate groovy script available under $SOAPUI_HOME/scripts. Refer [_Mappings_](https://github.com/nmrao/soapuiExtensions/blob/master/src/main/groovy/resources/script.properties) file in order to implement respective groovy script.
 
 Note: for windows users, you may need to check %SOAPUI_HOME%\bin\soapui.bat which actually overwrites SOAPUI_HOME, need to fix soapui.bat script if requires.
 uses jdk 7, soapUI 4.5.1, and groovy 1.8.9
