@@ -4,6 +4,8 @@ This soapuiExtensions library allows users to have some additional functionality
 
 For eg: User may want to do something before running a test case or after running a test case etc by implementing appropriate groovy script as required. Allow me to add an example here. Usually user may want to add credentials for the request step automatically, see the script [_samples/scripts/TestSuiteTestStepAdded.groovy_](https://github.com/nmrao/soapuiExtensions/blob/master/samples/scripts/TestSuiteTestStepAdded.groovy)
 
+Another use case can be to log the response [sample/scripts/RequestStepAfterSubmit.groovy](https://github.com/nmrao/soapuiExtensions/blob/master/samples/scripts/RequestStepAfterSubmit.groovy).
+
 ### How to use this library: 
 set _SOAPUI_HOME_ environment variable with appropriate value. 
 - copy _[lib/SoapUIExtListeners.jar](https://github.com/nmrao/soapuiExtensions/blob/master/lib/SoapUIExtListeners.jar)_ file under `$SOAPUI_HOME/bin/ext` directory 
